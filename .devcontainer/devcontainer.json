@@ -1,0 +1,22 @@
+{
+  "name": "Verilog-Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "postCreateCommand": "sudo apt update && sudo apt install -y yosys graphviz iverilog gtkwave && pip install --user yowasp-yosys",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "TerosTechnology.teroshdl",
+        "TheClams.veriloghdl",
+        "mshr-h.Verilog-HDL-SystemVerilog-Bluespec",
+        "ericsson.vscode-icons",
+        "Vaporview.vaporview"
+      ],
+      "settings": {
+        "teroshdl.yosys.yosysPath": "yowasp-yosys"
+      }
+    }
+  }
+}
